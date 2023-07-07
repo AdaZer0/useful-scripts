@@ -1,0 +1,1 @@
+tar cf - ${1} | pv -s $(du -sb ${1} | awk '{print $1}') | gzip > ${2}.tar.gz
